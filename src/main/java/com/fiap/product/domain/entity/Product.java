@@ -1,7 +1,5 @@
 package com.fiap.product.domain.entity;
 
-import jakarta.validation.constraints.NotNull;
-
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -13,7 +11,7 @@ public class Product {
     private String description;
     private Category category;
 
-    public Product(@NotNull String sku, @NotNull String name, @NotNull BigDecimal price, @NotNull String description, @NotNull Category category) {
+    public Product(String sku, String name, BigDecimal price, String description, Category category) {
         setId(UUID.randomUUID().toString());
         setSku(sku);
         setName(name);
@@ -22,7 +20,7 @@ public class Product {
         setCategory(category);
     }
 
-    public Product(@NotNull String id, String sku, String name, BigDecimal price, String description, Category category) {
+    public Product(String id, String sku, String name, BigDecimal price, String description, Category category) {
         this(sku, name, price, description, category);
         setId(id);
     }
