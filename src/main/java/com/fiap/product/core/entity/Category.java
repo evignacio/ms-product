@@ -1,4 +1,4 @@
-package com.fiap.product.domain.entity;
+package com.fiap.product.core.entity;
 
 public enum Category {
     ELECTRONICS,
