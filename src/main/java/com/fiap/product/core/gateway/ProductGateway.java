@@ -11,4 +11,6 @@ public interface ProductGateway {
     Set<Product> findAll();
 
     void save(Product product);
+
+    void deleteBySku(String sku);
 }

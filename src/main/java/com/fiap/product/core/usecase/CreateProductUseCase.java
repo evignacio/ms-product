@@ -5,8 +5,10 @@ import com.fiap.product.core.entity.Category;
 import com.fiap.product.core.entity.Product;
 import com.fiap.product.core.gateway.ProductGateway;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 @Slf4j
+@Service
 public class CreateProductUseCase {
 
     private final ProductGateway productGateway;
