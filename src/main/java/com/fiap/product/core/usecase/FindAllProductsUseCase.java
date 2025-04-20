@@ -17,7 +17,7 @@ public class FindAllProductsUseCase {
         this.productGateway = productGateway;
     }
 
-    Set<Product> execute() {
+    public Set<Product> execute() {
         log.info("Finding all products");
         var products = productGateway.findAll();
         log.info("Found {} products", products.size());

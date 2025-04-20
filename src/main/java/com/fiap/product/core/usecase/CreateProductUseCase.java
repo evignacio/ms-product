@@ -17,7 +17,7 @@ public class CreateProductUseCase {
         this.productGateway = productGateway;
     }
 
-    Product execute(CreateProductDTO input) {
+    public Product execute(CreateProductDTO input) {
         log.info("Creating product with SKU: {}", input.sku());
 
         var product = productGateway.findBySku(input.sku());
