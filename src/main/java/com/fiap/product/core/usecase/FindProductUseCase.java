@@ -15,7 +15,7 @@ public class FindProductUseCase {
     }
 
     public Product execute(String sku) {
-        log.info("Finding product with SKU: {}", sku);
+         log.info("Finding product with SKU: {}", sku);
         var productOpt = productGateway.findBySku(sku);
 
         if (productOpt.isEmpty()) {
