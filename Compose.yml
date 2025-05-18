@@ -1,0 +1,26 @@
+services:
+  ms-product-app:
+    image: evandroig/ms-product:latest
+    networks:
+      - "ms-product-network"
+    ports:
+      - "8080:8080"
+    links:
+      - "mongodb:servicedb"
+    depends_on:
+      - "mongodb"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/ms-product
+  mongodb:
+    networks:
+      - "ms-product-network"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    image: mongo:latest
+networks:
+  ms-product-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
