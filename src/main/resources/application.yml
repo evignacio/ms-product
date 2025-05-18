@@ -1,5 +1,11 @@
+server:
+  port: 8081
 spring:
   data:
     mongodb:
       initialization-mode: always
       uri: mongodb://localhost:27017/ms-product
+  liquibase:
+    change-log:
+      classpath: db-json/master.json
+    enabled: true

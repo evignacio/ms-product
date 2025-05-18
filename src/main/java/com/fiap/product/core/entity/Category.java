@@ -10,6 +10,13 @@ public enum Category {
     BEAUTY,
     AUTOMOTIVE,
     GARDEN,
+    FASHION,
+    TOOLS,
+    FURNITURE,
+    FOOD,
+    GAMES,
+    OUTDOORS,
+    HOME,
     OFFICE_SUPPLIES;
 
     public static Category fromString(String category) {

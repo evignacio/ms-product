@@ -1,0 +1,102 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "insert-products-v1",
+        "author": "Ariel ",
+        "comment": "Insert base products",
+        "changes": [
+          {
+            "insertMany": {
+              "collectionName": "products",
+              "documents": {
+                "$rawJson": [
+                  {
+                    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+                    "sku": "ELE-TV-4K-789",
+                    "name": "Smart 4K UHD TV 55 Inch",
+                    "price": 799.99,
+                    "description": "Immerse yourself in stunning 4K resolution with vibrant colors.",
+                    "category": "ELECTRONICS"
+                  },
+                  {
+                    "id": "f9e8d7c6-b5a4-3210-fedc-ba9876543210",
+                    "sku": "BOO-SCI-FI-012",
+                    "name": "The Galactic Odyssey",
+                    "price": 12.50,
+                    "description": "A thrilling sci-fi adventure across distant galaxies.",
+                    "category": "BOOKS"
+                  },
+                  {
+                    "id": "10293847-56ab-cdef-0123-456789abcdef",
+                    "sku": "FAS-TSH-L-456",
+                    "name": "Cotton Blend Graphic Tee - Large",
+                    "price": 25.00,
+                    "description": "Comfortable and stylish t-shirt with a unique graphic print.",
+                    "category": "FASHION"
+                  },
+                  {
+                    "id": "bcdefa01-2345-6789-abcd-ef0123456789",
+                    "sku": "TOO-KIT-PRO-987",
+                    "name": "Professional 100-Piece Tool Kit",
+                    "price": 149.95,
+                    "description": "A comprehensive set of high-quality tools for various tasks.",
+                    "category": "TOOLS"
+                  },
+                  {
+                    "id": "98765432-10fe-dcba-9876-543210fedcba",
+                    "sku": "FUR-SOF-L-234",
+                    "name": "Luxury Leather Sofa - 3 Seater",
+                    "price": 1200.00,
+                    "description": "Elegant and comfortable leather sofa for your living room.",
+                    "category": "FURNITURE"
+                  },
+                  {
+                    "id": "34567890-abcdef-0123-4567-89abcdef0123",
+                    "sku": "FOO-SNA-CHOC-567",
+                    "name": "Gourmet Dark Chocolate Bar",
+                    "price": 4.99,
+                    "description": "Rich and decadent dark chocolate made with premium cocoa beans.",
+                    "category": "FOOD"
+                  },
+                  {
+                    "id": "ef012345-6789-abcd-ef01-23456789abcd",
+                    "sku": "GAM-CON-PS-001",
+                    "name": "Wireless Gaming Controller",
+                    "price": 59.99,
+                    "description": "Ergonomic wireless controller for immersive gaming experiences.",
+                    "category": "GAMES"
+                  },
+                  {
+                    "id": "456789ab-cdef-0123-4567-89abcdef012345",
+                    "sku": "OUT-CAM-HD-321",
+                    "name": "Waterproof HD Action Camera",
+                    "price": 89.00,
+                    "description": "Capture your adventures in high definition, even underwater.",
+                    "category": "OUTDOORS"
+                  },
+                  {
+                    "id": "cdefab01-2345-6789-abcd-ef0123456789ab",
+                    "sku": "HEA-EAR-BLU-654",
+                    "name": "Noise-Cancelling Bluetooth Headphones",
+                    "price": 129.50,
+                    "description": "Enjoy pure sound with advanced noise-cancelling technology.",
+                    "category": "ELECTRONICS"
+                  },
+                  {
+                    "id": "23456789-abcdef-0123-4567-89abcdef01234567",
+                    "sku": "HOM-DEC-PLA-789",
+                    "name": "Artificial Potted Plant - Fiddle Leaf Fig",
+                    "price": 39.99,
+                    "description": "Add a touch of greenery to your home without the maintenance.",
+                    "category": "HOME"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
