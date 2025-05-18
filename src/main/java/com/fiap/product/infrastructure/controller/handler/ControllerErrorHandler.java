@@ -1,5 +1,6 @@
 package com.fiap.product.infrastructure.controller.handler;
 
+import com.fiap.product.core.exception.ProductNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,5 +18,11 @@ public class ControllerErrorHandler {
     public ResponseEntity<ErrorResponse> handleIllegalStateException(IllegalStateException exception) {
         return ResponseEntity.unprocessableEntity()
                 .body(new ErrorResponse(exception.getMessage(), -2));
+    }
+
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<Void> handleProductNotFoundException(ProductNotFoundException exception) {
+        return ResponseEntity.noContent()
+                .build();
     }
 }

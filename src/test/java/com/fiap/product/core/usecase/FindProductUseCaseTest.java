@@ -2,6 +2,7 @@ package com.fiap.product.core.usecase;
 
 import com.fiap.product.core.entity.Category;
 import com.fiap.product.core.entity.Product;
+import com.fiap.product.core.exception.ProductNotFoundException;
 import com.fiap.product.core.gateway.ProductGateway;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -52,8 +53,8 @@ class FindProductUseCaseTest {
         var exception = catchThrowable(() -> findProductUseCase.execute(sku));
 
         assertThat(exception)
-                .isInstanceOf(IllegalStateException.class)
-                .hasMessage("Product not found with SKU: " + sku);
+                .isInstanceOf(ProductNotFoundException.class)
+                .hasMessage("Product not found");
 
         verify(productGateway, times(1)).findBySku(sku);
     }
